@@ -87,6 +87,7 @@
         <!-- Contact Form & Map Overlay Section
         ============================================= -->
         <section id="map-overlay">
+            
 
             <div class="container clearfix">
 
@@ -98,7 +99,7 @@
                         <h3>Send us an Email</h3>
                     </div>
 
-                    <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+                    <div id="contact-form-result" data-notify-type="success" data-notify-msg="> <i class=" icon-ok-sign"></i> Message Sent Successfully!"></div>
 
                     <!-- Contact Form
                     ============================================= -->
@@ -186,21 +187,22 @@
 
                 $('#google-map').gMap({
 
-                    address: 'Melbourne, Australia',
+                    address: '1st Cross, Srirampuram Post, 5th Main Rd, Mariappanapalya, Rajaji Nagar, Bengaluru, Karnataka 560021',
                     maptype: 'ROADMAP',
                     zoom: 14,
                     markers: [
-						{
-						    address: "Melbourne, Australia",
-						    html: '<div style="width: 300px;"><h4 style="margin-bottom: 8px;">Hi, we\'re <span>Envato</span></h4><p class="nobottommargin">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day, and a network of educational blogs where millions learn <strong>creative skills</strong>.</p></div>',
-						    icon: {
-						        image: "images/icons/map-icon-red.png",
-						        iconsize: [32, 39],
-						        iconanchor: [32, 39]
-						    }
-						}
+		
+		{
+		    address: "1st Cross, Srirampuram Post, 5th Main Rd, Mariappanapalya, Rajaji Nagar, Bengaluru, Karnataka 560021",
+		    html: '<div style="width: 300px;"><h4 style="margin-bottom: 8px;">Hi, we\'re <span>Suhas Printers</span></h4><p class="nobottommargin">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day, and a network of educational blogs where millions learn <strong>creative skills</strong>.</p></div>',
+		    icon: {
+		        image: "images/icons/map-icon-red.png",
+		        iconsize: [32, 39],
+		        iconanchor: [32, 39]
+		    }
+		}
                     ],
-                    doubleclickzoom: false,
+                    doubleclickzoom: true,
                     controls: {
                         panControl: true,
                         zoomControl: true,
@@ -214,17 +216,18 @@
 
             </script><!-- Google Map End -->
 
+
         </section><!-- Contact Form & Map Overlay Section End -->
         <!-- Footer
         ============================================= -->
         <!-- Footer
-    ============================================= -->
+        ============================================= -->
         <footer id="footer" class="dark">
 
             <div class="container"></div>
 
             <!-- Copyrights
-        ============================================= -->
+            ============================================= -->
             <div id="copyrights">
 
                 <div class="container clearfix">
