@@ -18,8 +18,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
         $botcheck = $_POST['template-contactform-botcheck'];
 
-        $toemail = 'info@suhasprinters.com'; // Your Email Address
-        $toname = 'Suhas Manjunnath'; // Your Name
+        $toemail = ''; // Your Email Address
+        $toname = ''; // Your Name
 
         if( $botcheck == '' ) {
 

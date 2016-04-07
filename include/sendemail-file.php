@@ -5,15 +5,18 @@ require_once('phpmailer/class.phpmailer.php');
 $mail = new PHPMailer();
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-	if( $_POST['quick-contact-form-name'] != '' AND $_POST['quick-contact-form-email'] != '' AND $_POST['quick-contact-form-message'] != '' ) {
+	if( $_POST['template-contactform-name'] != '' AND $_POST['template-contactform-email'] != '' AND $_POST['template-contactform-message'] != '' ) {
 
-		$name = $_POST['quick-contact-form-name'];
-		$email = $_POST['quick-contact-form-email'];
-		$message = $_POST['quick-contact-form-message'];
+		$name = $_POST['template-contactform-name'];
+		$email = $_POST['template-contactform-email'];
+		$phone = $_POST['template-contactform-phone'];
+		$service = $_POST['template-contactform-service'];
+		$subject = $_POST['template-contactform-subject'];
+		$message = $_POST['template-contactform-message'];
 
-		$subject = 'New Message From Quick Contact Form';
+		$subject = isset($subject) ? $subject : 'New Message From Contact Form';
 
-		$botcheck = $_POST['quick-contact-form-botcheck'];
+		$botcheck = $_POST['template-contactform-botcheck'];
 
 		$toemail = ''; // Your Email Address
 		$toname = ''; // Your Name
@@ -21,17 +24,24 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if( $botcheck == '' ) {
 
 			$mail->SetFrom( $email , $name );
-			$mail->AddReplyTo( $toemail , $toname );
+			$mail->AddReplyTo( $email , $name );
 			$mail->AddAddress( $toemail , $toname );
 			$mail->Subject = $subject;
 
 			$name = isset($name) ? "Name: $name<br><br>" : '';
 			$email = isset($email) ? "Email: $email<br><br>" : '';
+			$phone = isset($phone) ? "Phone: $phone<br><br>" : '';
+			$service = isset($service) ? "Service: $service<br><br>" : '';
 			$message = isset($message) ? "Message: $message<br><br>" : '';
 
 			$referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
 
-			$body = "$name $email $message $referrer";
+			$body = "$name $email $phone $service $message $referrer";
+
+			if ( isset( $_FILES['template-contactform-cvfile'] ) && $_FILES['template-contactform-cvfile']['error'] == UPLOAD_ERR_OK ) {
+				$mail->IsHTML(true);
+				$mail->AddAttachment( $_FILES['template-contactform-cvfile']['tmp_name'], $_FILES['template-contactform-cvfile']['name'] );
+			}
 
 			$mail->MsgHTML( $body );
 			$sendEmail = $mail->Send();
