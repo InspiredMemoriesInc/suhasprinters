@@ -24,9 +24,8 @@ dl, dt, dd, ol, ul, li {
 	width: 100%;
 	overflow:hidden;
 }
-
 ::selection {
-	background: #1ABC9C;
+	background: #fff;
 	color: #FFF;
 	text-shadow: none;
 }
@@ -1116,8 +1115,8 @@ body.stretched #header.full-header .container {
 	transition: line-height .4s ease;
 }
 
-#primary-menu > ul > li:hover a,
-#primary-menu > ul > li.current a { color: #1ABC9C; }
+#primary-menu > ul > li:hover a { color: #fff; }
+#primary-menu > ul > li.current a {background-color: #1ABC9C; color: #fff}
 
 #primary-menu > ul > li.sub-menu > a > div { }
 
