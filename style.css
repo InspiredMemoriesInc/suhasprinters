@@ -9,10 +9,15 @@
 
 -----------------------------------------------------------------------------------*/
 
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700italic);
 
 dl, dt, dd, ol, ul, li {
 	margin: 0;
 	padding: 0;
+}
+
+title {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .clear {
