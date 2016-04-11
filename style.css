@@ -9,15 +9,10 @@
 
 -----------------------------------------------------------------------------------*/
 
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700italic);
 
 dl, dt, dd, ol, ul, li {
 	margin: 0;
 	padding: 0;
-}
-
-title {
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 .clear {
@@ -29,8 +24,9 @@ title {
 	width: 100%;
 	overflow:hidden;
 }
+
 ::selection {
-	background: #fff;
+	background: #1ABC9C;
 	color: #FFF;
 	text-shadow: none;
 }
@@ -1120,8 +1116,8 @@ body.stretched #header.full-header .container {
 	transition: line-height .4s ease;
 }
 
-#primary-menu > ul > li:hover a { color: #fff; }
-#primary-menu > ul > li.current a {background-color: #1ABC9C; color: #fff}
+#primary-menu > ul > li:hover a,
+#primary-menu > ul > li.current a { color: #1ABC9C; }
 
 #primary-menu > ul > li.sub-menu > a > div { }
 
@@ -10850,7 +10846,7 @@ label.error { display: none !important; }
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #fff;
+	color: #333;
 }
 
 .emphasis-title h1,
