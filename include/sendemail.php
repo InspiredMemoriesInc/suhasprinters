@@ -42,7 +42,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
             $sendEmail = $mail->Send();
 
             if( $sendEmail == true ):
-                echo 'We have <strong>successfully</strong> received your Message and will get Back to you as soon as possible.';
+                echo '<script>alert("We have <strong>successfully</strong> received your Message and will get Back to you as soon as possible.")</script>';
+
             else:
                 echo 'Email <strong>could not</strong> be sent due to some Unexpected Error. Please Try Again later.<br /><br /><strong>Reason:</strong><br />' . $mail->ErrorInfo . '';
             endif;
