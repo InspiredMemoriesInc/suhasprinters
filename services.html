@@ -17,6 +17,13 @@
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
+    <!--Favicon-->
+    <link rel="shortcut icon" href="Res/favicon.ico" />
+
+    <!--Google Chrome v39 Lollpop Afterwards Mobile Support-->
+    <meta name="theme-color" content="rgb(52, 73, 94)">
+    <link rel="icon" sizes="192x192" href="Res/favicon192.png">
+
 
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +78,7 @@
                                     <li><a href="products/rubberstamps.html"><div>Rubber Stamps</div></a></li>
                                 </ul>
                             </li>
-                            <li><a href="gallery.html"><div>Gallery</div></a></li>
+                            <!--<li><a href="gallery.html"><div>Gallery</div></a></li>-->
                             <li><a href="about.html"><div>About Us</div></a></li>
                             <li><a href="contact.html"><div>Contact</div></a></li>
                         </ul>
@@ -180,113 +187,6 @@
                         </div>
 
                     </div>
-
-                </div>
-
-                <div class="container clearfix">
-
-                    <div class="col_two_fifth topmargin nobottommargin" id="radarChart" style="opacity: 0;">
-                        <canvas id="radarChartCanvas" width="430" height="300"></canvas>
-                    </div>
-
-                    <div class="col_three_fifth nobottommargin col_last">
-
-                        <div class="heading-block">
-                            <h3 style="color:#000">We Provide Services for Ceremonies and Personnel Fulfillments</h3>
-                            <span>We provide services for from the Personnel cards to wedding cards making every Occassion Better</span>
-                        </div>
-                        <p>We Provide Different Kind of Services based on your requirements. You Can find out with Us here.</p>
-                        <p>Wedding Cards, Personnel Cards, Portfolio Cards, Ceremony Cards, Naming Cards and Much More</p>
-                    </div>
-
-                    <div class="clear"></div><div class="line"></div>
-
-                    <div class="col_three_fifth">
-
-                        <div class="heading-block">
-                            <h3 style="color:#000">Advanced store statistics.</h3>
-                            <span>Benchmarking your website's performance helps you make great choices for your business.</span>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
-
-                        <a href="#">Learn more &rarr;</a>
-
-                    </div>
-
-                    <div class="col_two_fifth topmargin col_last" id="doughnutChart" style="opacity: 0;">
-                        <canvas id="doughnutChartCanvas" width="430" height="300"></canvas>
-                    </div>
-
-                    <script type="text/javascript">
-
-                        jQuery(window).load(function () {
-
-                            var radarChartData = {
-                                labels: ["A", "B", "C", "D", "E", "F", "G"],
-                                datasets: [
-                                    {
-                                        fillColor: "rgba(220,220,220,0.5)",
-                                        strokeColor: "rgba(220,220,220,1)",
-                                        pointColor: "rgba(220,220,220,1)",
-                                        pointStrokeColor: "#fff",
-                                        data: [65, 59, 90, 81, 56, 55, 40]
-                                    },
-                                    {
-                                        fillColor: "rgba(151,187,205,0.5)",
-                                        strokeColor: "rgba(151,187,205,1)",
-                                        pointColor: "rgba(151,187,205,1)",
-                                        pointStrokeColor: "#fff",
-                                        data: [28, 48, 40, 19, 96, 27, 100]
-                                    }
-                                ]
-
-                            };
-
-                            var doughnutChartData = [
-                                {
-                                    value: 30,
-                                    color: "#F7464A"
-                                },
-                                {
-                                    value: 50,
-                                    color: "#46BFBD"
-                                },
-                                {
-                                    value: 100,
-                                    color: "#FDB45C"
-                                },
-                                {
-                                    value: 40,
-                                    color: "#949FB1"
-                                },
-                                {
-                                    value: 120,
-                                    color: "#4D5360"
-                                }
-                            ];
-
-                            var globalGraphSettings = { animation: Modernizr.canvas };
-
-                            function showRadarChart() {
-                                var ctx = document.getElementById("radarChartCanvas").getContext("2d");
-                                new Chart(ctx).Radar(radarChartData, globalGraphSettings);
-                            }
-
-                            function showDoughnutChart() {
-                                var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
-                                new Chart(ctx).Doughnut(doughnutChartData, globalGraphSettings);
-                            }
-
-                            $('#radarChart').appear(function () { $(this).css({ opacity: 1 }); setTimeout(showRadarChart, 300); }, { accX: 0, accY: -155 }, 'easeInCubic');
-
-                            $('#doughnutChart').appear(function () { $(this).css({ opacity: 1 }); setTimeout(showDoughnutChart, 300); }, { accX: 0, accY: -155 }, 'easeInCubic');
-
-                        });
-
-                    </script>
 
                 </div>
 
